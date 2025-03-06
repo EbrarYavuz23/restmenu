@@ -1,0 +1,102 @@
+* {
+    font-family: "Times New Roman", Times, serif;
+    z-index: 1;
+}
+
+body {
+    background-color: #FFF4E0;
+}
+.image-container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+
+.image-container img {
+        width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        
+    }
+
+.image-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 10px 20px;
+        border-radius: 8px;
+    }
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 300px; /* Sabit yükseklik belirledik */
+    overflow: hidden; /* Büyük resimler taşmaması için */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    object-fit: cover;
+}
+
+.vr {
+    border-left: 5px solid #FC3C3C;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -3px;
+    top: 0;
+  }
+
+footer {
+    background-color: #F8B500;
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+ul {
+    list-style-type:none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+.image-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.image-container:hover img {
+    transform: scale(1.1);
+    filter: brightness(80%);
+}
+
+.image-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 8px 16px;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.image-container:hover .image-text {
+    opacity: 1;
+}
